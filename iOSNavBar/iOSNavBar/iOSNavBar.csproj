@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{9E50D18F-7242-4D5F-85BF-46B9F57584B2}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>iOSNavBar</RootNamespace>
+    <AssemblyName>iOSNavBar</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>60001</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>14518</IOSDebuggerPort>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="ActionComponents">
+      <HintPath>..\..\GitHub\ActionComponents\ActionComponentsTrial\iOS\ActionComponents.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\BarChart.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\BarChart.imageset\bar-chart.png" />
+    <ImageAsset Include="Assets.xcassets\Chart.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Chart.imageset\chart.png" />
+    <ImageAsset Include="Assets.xcassets\Gear.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\House.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\House.imageset\house.png" />
+    <ImageAsset Include="Assets.xcassets\OrgChart.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\OrgChart.imageset\orgchart.png" />
+    <ImageAsset Include="Assets.xcassets\Gear.imageset\gear.png" />
+    <ImageAsset Include="Assets.xcassets\Printer.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Printer.imageset\printer.png" />
+    <ImageAsset Include="Assets.xcassets\Ticket.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Ticket.imageset\ticket.png" />
+    <ImageAsset Include="Assets.xcassets\Trash.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Trash.imageset\trash.png" />
+    <ImageAsset Include="Assets.xcassets\Warning.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Warning.imageset\warning.png" />
+    <ImageAsset Include="Assets.xcassets\Linen.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Linen.imageset\Linen.jpg" />
+    <ImageAsset Include="Assets.xcassets\BarChartView.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\BarChartView.imageset\barchartview.png" />
+    <ImageAsset Include="Assets.xcassets\HomeView.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\HomeView.imageset\homeview.png" />
+    <ImageAsset Include="Assets.xcassets\OrgChartView.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\OrgChartView.imageset\orgchartview.png" />
+    <ImageAsset Include="Assets.xcassets\SettingsView.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SettingsView.imageset\settingsview.png" />
+    <ImageAsset Include="Assets.xcassets\TicketView.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\TicketView.imageset\ticketview.png" />
+    <ImageAsset Include="Assets.xcassets\LSBackground.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LSBackground.imageset\Default-Landscape.png" />
+    <ImageAsset Include="Assets.xcassets\LSBackground.imageset\Default-Landscape%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Assets.xcassets\BarChart.imageset\" />
+    <Folder Include="Assets.xcassets\Chart.imageset\" />
+    <Folder Include="Assets.xcassets\Gear.imageset\" />
+    <Folder Include="Assets.xcassets\House.imageset\" />
+    <Folder Include="Assets.xcassets\OrgChart.imageset\" />
+    <Folder Include="Assets.xcassets\Printer.imageset\" />
+    <Folder Include="Assets.xcassets\Ticket.imageset\" />
+    <Folder Include="Assets.xcassets\Trash.imageset\" />
+    <Folder Include="Assets.xcassets\Warning.imageset\" />
+    <Folder Include="Assets.xcassets\Linen.imageset\" />
+    <Folder Include="Assets.xcassets\BarChartView.imageset\" />
+    <Folder Include="Assets.xcassets\HomeView.imageset\" />
+    <Folder Include="Assets.xcassets\OrgChartView.imageset\" />
+    <Folder Include="Assets.xcassets\SettingsView.imageset\" />
+    <Folder Include="Assets.xcassets\TicketView.imageset\" />
+    <Folder Include="Assets.xcassets\LSBackground.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

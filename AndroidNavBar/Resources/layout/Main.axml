@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="fill_parent"
+    p1:layout_height="fill_parent"
+    p1:id="@+id/masterLayout"
+    p1:background="@drawable/Linen">
+    <ImageView
+        p1:src="@drawable/view1"
+        p1:layout_width="fill_parent"
+        p1:layout_height="fill_parent"
+        p1:id="@+id/viewHome"
+        p1:scaleType="center"
+        p1:visibility="gone"
+        p1:minWidth="299dp"
+        p1:minHeight="299dp" />
+    <ActionComponents.ACNavBar
+        p1:layout_width="80dp"
+        p1:layout_height="fill_parent"
+        p1:id="@+id/navBar"
+        p1:layout_gravity="top" />
+</RelativeLayout>
